@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "buildCommand": "npx nx build",
+  "outputDirectory": "packages/twenty-website/.next",
+  "installCommand": "yarn install --frozen-lockfile",
+  "framework": "nextjs",
+  "functions": {
+    "packages/twenty-website/src/app/api/**": {
+      "maxDuration": 30
+    }
+  },
+  "ignoreCommand": "git diff --quiet HEAD^ HEAD packages/twenty-website/",
+  "env": {
+    "SKIP_ENV_VALIDATION": "true",
+    "CANVAS_PREBUILT": "false"
+  }
+} 

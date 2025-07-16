@@ -1,0 +1,28 @@
+{
+  "name": "twenty",
+  "$schema": "node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npx nx run twenty-website:build"
+      },
+      "dependsOn": ["^build"]
+    },
+    "build:front": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npx nx run twenty-front:build"
+      },
+      "dependsOn": ["^build"]
+    },
+    "start": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npx nx run twenty-website:start"
+      },
+      "dependsOn": ["build"]
+    }
+  }
+} 

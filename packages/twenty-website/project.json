@@ -1,0 +1,68 @@
+{
+  "name": "twenty-website",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "packages/twenty-website/src",
+  "tags": ["scope:website"],
+  "targets": {
+    "build": {
+      "executor": "nx:run-commands",
+      "outputs": ["{projectRoot}/.next"],
+      "options": {
+        "cwd": "{projectRoot}",
+        "command": "npx next build"
+      },
+      "dependsOn": ["^build"]
+    },
+    "start": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "{projectRoot}",
+        "command": "npx next start"
+      },
+      "dependsOn": ["build"]
+    },
+    "dev": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "{projectRoot}",
+        "command": "npx next dev"
+      }
+    },
+    "lint": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "{projectRoot}",
+        "command": "npx next lint"
+      }
+    },
+    "github:sync": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "{projectRoot}",
+        "command": "npx tsx src/github/github-sync.ts"
+      }
+    },
+    "github:init": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "{projectRoot}",
+        "command": "npx tsx src/github/github-sync.ts --isFullSync"
+      }
+    },
+    "database:migrate": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "{projectRoot}",
+        "command": "npx tsx src/database/migrate-database.ts"
+      }
+    },
+    "database:generate:pg": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "{projectRoot}",
+        "command": "npx drizzle-kit generate:pg --config=src/database/drizzle-posgres.config.ts"
+      }
+    }
+  }
+} 
