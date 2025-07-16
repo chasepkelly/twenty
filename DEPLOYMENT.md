@@ -40,6 +40,10 @@ If you see "Cannot find configuration for task twenty:build", ensure:
 2. The `packages/twenty-website/project.json` file exists
 3. The Nx workspace is properly configured
 
+#### Functions Configuration Error
+
+If you see "The pattern 'packages/twenty-website/src/app/api/**' defined in `functions` doesn't match any Serverless Functions", this means Vercel is using an old version of `vercel.json`. Ensure the latest version is deployed.
+
 ### Local Testing
 
 To test the build locally:
