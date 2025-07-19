@@ -1,0 +1,14 @@
+[variables]
+NODE_ENV = "production"
+
+[providers.node]
+packageManager = "yarn"
+
+[phases.install]
+cmds = ["yarn install --frozen-lockfile"]
+
+[phases.build]
+cmds = ["yarn build"]
+
+[start]
+cmd = "yarn start:prod" 
