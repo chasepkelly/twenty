@@ -2,7 +2,7 @@
 NODE_ENV = "production"
 
 [phases.install]
-cmds = ["corepack enable", "corepack prepare yarn@4.9.2 --activate", "yarn install --immutable"]
+cmds = ["corepack enable", "corepack prepare yarn@4.9.2 --activate", "yarn install"]
 
 [phases.build]
 cmds = ["yarn build"]
