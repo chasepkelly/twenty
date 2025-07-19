@@ -7,10 +7,10 @@ import {
 export const CallToAction = () => {
   return (
     <CallToActionContainer>
-      <LinkNextToCTA href="https://20crm-git-main-chases-projects-4b700c94.vercel.app">
+      <LinkNextToCTA href="https://20crm-git-main-chases-projects-4b700c94.vercel.app/welcome">
         Sign in
       </LinkNextToCTA>
-      <a href="https://20crm-git-main-chases-projects-4b700c94.vercel.app">
+      <a href="https://20crm-git-main-chases-projects-4b700c94.vercel.app/welcome">
         <StyledButton>Get Started</StyledButton>
       </a>
     </CallToActionContainer>
