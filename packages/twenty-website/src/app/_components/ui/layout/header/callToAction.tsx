@@ -7,10 +7,10 @@ import {
 export const CallToAction = () => {
   return (
     <CallToActionContainer>
-      <LinkNextToCTA href="https://twentypostgres-production-0306.up.railway.app">
+      <LinkNextToCTA href="https://server-production-0382.up.railway.app">
         Sign in
       </LinkNextToCTA>
-      <a href="https://twentypostgres-production-0306.up.railway.app">
+      <a href="https://server-production-0382.up.railway.app">
         <StyledButton>Get Started</StyledButton>
       </a>
     </CallToActionContainer>
