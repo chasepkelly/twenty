@@ -3,8 +3,8 @@
 NODE_ENV = "production"
 
 # Force yarn usage instead of npm
-[providers.node]
-packageManager = "yarn"
+[providers]
+node = { packageManager = "yarn" }
 
 # Custom install phase to use yarn with proper flags
 [phases.setup]
