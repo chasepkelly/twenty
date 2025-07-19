@@ -1,9 +1,8 @@
 {
   "version": 2,
-  "buildCommand": "npx nx build",
-  "outputDirectory": "packages/twenty-website/.next",
+  "buildCommand": "npx nx build twenty-front",
+  "outputDirectory": "packages/twenty-front/build",
   "installCommand": "yarn install --frozen-lockfile",
-  "framework": "nextjs",
   "env": {
     "SKIP_ENV_VALIDATION": "true",
     "CANVAS_PREBUILT": "false"
