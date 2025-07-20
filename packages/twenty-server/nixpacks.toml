@@ -1,3 +1,4 @@
+# Railway nixpacks configuration for Twenty server
 [variables]
 NODE_ENV = "production"
 NODE_VERSION = "22.12.0"
@@ -9,4 +10,4 @@ cmds = ["corepack enable", "corepack prepare yarn@4.9.2 --activate", "yarn insta
 cmds = ["npx nx build twenty-server"]
 
 [start]
-cmd = "node packages/twenty-server/dist/src/main" 
+cmd = "cd packages/twenty-server && node dist/src/main" 
