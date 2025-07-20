@@ -6,7 +6,7 @@ NODE_VERSION = "22.12.0"
 cmds = ["corepack enable", "corepack prepare yarn@4.9.2 --activate", "yarn install"]
 
 [phases.build]
-cmds = ["yarn build"]
+cmds = ["npx nx build twenty-server"]
 
 [start]
-cmd = "yarn start:prod" 
+cmd = "node packages/twenty-server/dist/src/main" 
